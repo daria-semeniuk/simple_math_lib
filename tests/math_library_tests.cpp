@@ -76,4 +76,9 @@ TEST_F(MathLibTestFixture, IsPrimeTest)
 TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
+    EXPECT_EQ(MathLib::GCD(48, 18), 6);
+    EXPECT_EQ(MathLib::GCD(17, 13), 1);
+    EXPECT_EQ(MathLib::GCD(0, 5), 5);
+    EXPECT_EQ(MathLib::GCD(5, 0), 5);
+    EXPECT_EQ(MathLib::GCD(-12, 18), 6);
 }

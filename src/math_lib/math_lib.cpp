@@ -1,5 +1,6 @@
 #include "math_lib.h"
 #include <cmath>
+#include <cstdlib>
 #include <algorithm>
 
 namespace MathLib
@@ -37,10 +38,15 @@ namespace MathLib
         return lcm;
     }
 
-    int GCD(int a, int b)
+   int GCD(int a, int b)
+{
+    a = std::abs(a);
+    b = std::abs(b);
+    while (b != 0)
     {
-		if (b == 0) return a;
-		return GCD(b, a % b);
-	}
+        int t = a % b;
+        a = b;
+        b = t;
+    }
+    return a;
 }
-
