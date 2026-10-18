@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 project(MathLibExample)
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
@@ -6,5 +6,5 @@ include_directories(${CMAKE_SOURCE_DIR}/src/math_lib/include)
 add_executable(MathLibExample main.cpp)
 
 add_subdirectory(math_lib)
-# Link the executable with the logger library
+# Link the executable with the math library
 target_link_libraries(MathLibExample math_library)
